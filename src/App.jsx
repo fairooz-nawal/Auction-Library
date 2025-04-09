@@ -11,8 +11,9 @@ import { ToastContainer, toast } from "react-toastify";
 function App() {
   const [markedBook, setMarkedBook] = useState([]);
   const bidding = fetch("./bidding.json").then(res => res.json());
-  const handleAddBookMark = (id) => {
-    setMarkedBook([...markedBook, id]);
+  const [biddingDone, setBiddingDone] = useState([]);
+  const handleAddBookMark = (bid,id) => {
+    setMarkedBook([...markedBook, bid]);
     toast('Item is added to Favourite Section Successfully!!', {
       position: "top-right",
       autoClose: 1000,
@@ -23,8 +24,9 @@ function App() {
       progress: undefined,
       theme: "light",
       });
+    setBiddingDone([...biddingDone, id]);
+    // setBiddingDone((prev) => [...prev, id]);
   }
-  console.log(markedBook);
   return (
     <>
       <div className="sora-regular max-w-full bg-gray-200">
@@ -48,7 +50,8 @@ function App() {
           <div className="flex  mx-auto gap-6">
             <Suspense fallback={<div><span className="loading loading-bars loading-xl"></span></div>}>
               <Bidding bidding={bidding}
-                handleAddBookMark={handleAddBookMark}>
+                handleAddBookMark={handleAddBookMark}
+                biddingDone={biddingDone}>
               </Bidding>
             </Suspense>
             <Favourite markedBook={markedBook}>

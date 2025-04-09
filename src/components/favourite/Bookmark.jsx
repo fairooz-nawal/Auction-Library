@@ -1,8 +1,7 @@
 import React from 'react';
 
 const Bookmark = ({markedBook}) => {
-   console.log(markedBook);
-   const {image,title,currentBidPrice,bidsCount} = markedBook;
+     const {image,title,currentBidPrice,bidsCount} = markedBook;
     return (
         <div>
             <div className="flex gap-3 space-y-3 mt-3 mb-2">

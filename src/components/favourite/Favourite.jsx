@@ -4,9 +4,10 @@ import Empty from './Empty';
 
 import BookmarkCollection from './BookmarkCollection';
 const Favourite = ({markedBook}) => {
+    console.log(markedBook);
     let totalAmount = 0;
     if(markedBook.length > 0){
-        totalAmount = totalAmount + markedBook.map(bookmark => bookmark.currentBidPrice).reduce((a, b) => a + b);
+        totalAmount = totalAmount + markedBook.map(bookmark => bookmark.currentBidPrice).reduce((a, b) => a + b); 
     }
     
     return (
