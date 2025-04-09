@@ -12,6 +12,7 @@ function App() {
   const handleAddBookMark = (id) => {
     setMarkedBook([...markedBook,id]);
   }
+  console.log(markedBook);
   return (
     <>
       <div className="sora-regular max-w-full bg-gray-200">
@@ -26,8 +27,7 @@ function App() {
                        handleAddBookMark={handleAddBookMark}>
               </Bidding>
             </Suspense>
-            <Favourite bidding={bidding} 
-                       markedBook={markedBook}>
+            <Favourite markedBook={markedBook}>
             </Favourite>
           </div>
         </div>

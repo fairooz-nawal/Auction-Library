@@ -4,6 +4,11 @@ import Empty from './Empty';
 
 import BookmarkCollection from './BookmarkCollection';
 const Favourite = ({markedBook}) => {
+    let totalAmount = 0;
+    if(markedBook.length > 0){
+        totalAmount = totalAmount + markedBook.map(bookmark => bookmark.currentBidPrice).reduce((a, b) => a + b);
+    }
+    
     return (
         <div className='col-span-2 rounded-3xl text-center'>
             <div className=" bg-white space-y-5 p-5 rounded-2xl">
@@ -16,7 +21,7 @@ const Favourite = ({markedBook}) => {
                 <hr className='text-gray-300' />
                 <div className="flex justify-between">
                     <h1 className='text-xl font-bold'>Total bids Amount</h1>
-                    <p className='text-xl text-gray-600 font-bold'>$ 0000</p>
+                    <p className='text-xl text-gray-600 font-bold'>$ {totalAmount}</p>
                 </div>
             </div>
         </div>
