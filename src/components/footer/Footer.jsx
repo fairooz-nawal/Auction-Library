@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <footer className="footer footer-horizontal footer-center p-10 py-[100px]">
+            <footer className="footer footer-horizontal footer-center p-10 py-[100px] bg-white">
                 <aside className='space-y-2'>
                     <a className="btn btn-ghost text-xl text-blue-700">AUCTION <span className="text-orange-300 font-black">GALLERY</span></a>
                    

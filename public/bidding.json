@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "Classic Camera",
+        "description": "Vintage Canon EOS 1N, 35mm film camera, excellent condition, with 50mm lens and original box.",
+        "currentBidPrice": 12500.00,
+        "timeLeft": "1 day 8 hours",
+        "bidsCount": 14,
+        "image": "https://i.ibb.co.com/JR5XWhMK/Bid1-min.png"
+    },
+    {
+        "id": 2,
+        "title": "Vintage Electric Guitar",
+        "description": "Rare 1960s Fender Stratocaster, excellent condition, with original case and tremolo arm.",
+        "currentBidPrice": 650.00,
+        "timeLeft": "3 days 5 hours",
+        "bidsCount": 9,
+        "image": "https://i.ibb.co.com/gbjtfwTr/Bid2-min.png"
+    },
+    {
+        "id": 3,
+        "title": "Apple MacBook Pro Laptop",
+        "description": "2019 model, 15.4-inch retina display, Intel Core i7 processor, 16GB RAM, 512GB SSD.",
+        "currentBidPrice": 1200.00,
+        "timeLeft": "2 days 10 hours",
+        "bidsCount": 7,
+        "image": "https://i.ibb.co.com/nNf2YD2p/Bid3-min.png"
+    },
+    {
+        "id": 4,
+        "title": "Limited Edition Rolex Daytona Watch",
+        "description": "2018 model, 40mm stainless steel case, black dial, chronograph function, comes with original box and papers.",
+        "currentBidPrice": 8500.00,
+        "timeLeft": "6 hours 45 minutes",
+        "bidsCount": 22,
+        "image": "https://i.ibb.co.com/Xx06GSQc/Bid4-min.png"
+    },
+    {
+        "id": 5,
+        "title": "Mid-Century Modern Eames Lounge Chair",
+        "description": "Vintage 1960s design, original leather upholstery, walnut wood frame, excellent condition.",
+        "currentBidPrice": 45000.00,
+        "timeLeft": "1 day 1 hour",
+        "bidsCount": 18,
+        "image": "https://i.ibb.co.com/CKTnvgMJ/Bid5-min.png"
+    },
+    {
+        "id": 6,
+        "title": "Original Oil on Canvas Painting by Local Artist",
+        "description": "2015 piece, 36x48 inches, vibrant colors, abstract expressionist style, signed and dated by the artist.",
+        "currentBidPrice": 18500.00,
+        "timeLeft": "4 days 2 hours",
+        "bidsCount": 11,
+        "image": "https://i.ibb.co.com/ZpcxVn9Q/Bid7-min.png"
+    }
+]
