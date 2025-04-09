@@ -17,30 +17,33 @@ const Bidding = ({ bidding }) => {
                 {
                     allbiddings.map(bid =>
                         <>
-                            <tr>
-                                <td>
-                                    <div className="flex items-center gap-3">
-                                        <div className="avatar">
-                                            <div className=" h-20 w-20">
-                                                <img
-                                                    src={bid.image}
-                                                    alt="Avatar Tailwind CSS Component" />
+                            <thead>
+                                <tr>
+                                    <td>
+                                        <div className="flex items-center gap-3">
+                                            <div className="avatar">
+                                                <div className=" h-20 w-20">
+                                                    <img
+                                                        src={bid.image}
+                                                        alt="Avatar Tailwind CSS Component" />
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div className="font-bold text-gray-500">{bid.title}</div>
                                             </div>
                                         </div>
-                                        <div>
-                                            <div className="font-bold text-gray-500">{bid.title}</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div className="font-bold text-gray-500">$ {bid.currentBidPrice}</div>
-                                    
-                                </td>
-                                <td><div className="font-bold text-gray-500">{bid.timeLeft}</div></td>
-                                <th>
-                                    <button className="btn btn-ghost btn-xs text-xl"><FaRegHeart /></button>
-                                </th>
-                            </tr>
+                                    </td>
+                                    <td>
+                                        <div className="font-bold text-gray-500">$ {bid.currentBidPrice}</div>
+
+                                    </td>
+                                    <td><div className="font-bold text-gray-500">{bid.timeLeft}</div></td>
+                                    <th>
+                                        <button className="btn btn-ghost btn-xs text-xl"><FaRegHeart /></button>
+                                    </th>
+                                </tr>
+                            </thead>
+
                         </>)
                 }
             </table>
