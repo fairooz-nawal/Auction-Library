@@ -23,9 +23,27 @@ function App() {
       draggable: true,
       progress: undefined,
       theme: "light",
+      type:"success",
       });
     setBiddingDone([...biddingDone, id]);
     // setBiddingDone((prev) => [...prev, id]);
+  }
+  const handleDeleteBookMark = (bookmark) =>{
+    const remaining = markedBook.filter(marked => marked.id !== bookmark.id);
+    setMarkedBook(remaining);
+    const remainingBooks = biddingDone.filter(id => id !== bookmark.id);
+    setBiddingDone(remainingBooks);
+    toast('Item is deleted Successfully!!', {
+      position: "top-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      type:"warning",
+      });
   }
   return (
     <>
@@ -54,7 +72,8 @@ function App() {
                 biddingDone={biddingDone}>
               </Bidding>
             </Suspense>
-            <Favourite markedBook={markedBook}>
+            <Favourite markedBook={markedBook}
+                       handleDeleteBookMark={handleDeleteBookMark}>
             </Favourite>
           </div>
         </div>

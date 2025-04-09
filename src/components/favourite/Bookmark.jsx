@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Bookmark = ({markedBook}) => {
+const Bookmark = ({markedBook,handleDeleteBookMark}) => {
      const {image,title,currentBidPrice,bidsCount} = markedBook;
     return (
         <div>
@@ -15,7 +15,7 @@ const Bookmark = ({markedBook}) => {
                         <p>Bids: {bidsCount}</p>
                     </div>
                 </div>
-                <div className="">X</div>
+                <div onClick={() => handleDeleteBookMark(markedBook)} className="btn"> X</div>
             </div>
             <hr className='text-gray-300 h-2' />
         </div>

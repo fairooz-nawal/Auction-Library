@@ -1,7 +1,6 @@
 import React, { use } from 'react';
 import { FaHeart } from "react-icons/fa";
-const Bidding = ({ bidding,handleAddBookMark,biddingDone }) => {
-    console.log(biddingDone);
+const Bidding = ({ bidding, handleAddBookMark, biddingDone }) => {
     const allbiddings = use(bidding);
     return (
         <div className='w-4/6 bg-white rounded-3xl'>
@@ -10,13 +9,13 @@ const Bidding = ({ bidding,handleAddBookMark,biddingDone }) => {
                 <thead className=''>
                     <tr className='text-black'>
                         <th className='py-6'>Items</th>
-                        <th className='py-6'>Current Bid</th>
+                        <th className='py-6'>Current Bid Price</th>
                         <th className='py-6'>Time Left</th>
                         <th className='py-6'>Bid Now</th>
                     </tr>
                 </thead>
                 {
-                    allbiddings.map((bid,index) =>
+                    allbiddings.map((bid, index) =>
                         <React.Fragment key={index}>
                             <thead>
                                 <tr>
@@ -39,10 +38,15 @@ const Bidding = ({ bidding,handleAddBookMark,biddingDone }) => {
 
                                     </td>
                                     <td><div className="font-bold text-gray-500">{bid.timeLeft}</div></td>
-                                    <th>
-                                        <button onClick={()=>handleAddBookMark(bid,bid.id)} className={`btn  text-xl bg-white border-none ${biddingDone.includes(bid.id) && 'text-red-600'}`}
-                                        disabled={biddingDone.includes(bid.id) ? true : false}><FaHeart /></button>
-                                    </th>
+                                    <td>
+                                        <button
+                                            onClick={() => handleAddBookMark(bid, bid.id)}
+                                            className={`text-xl ${biddingDone.includes(bid.id) ? 'text-red-500 cursor-not-allowed' : ''}`}
+                                            disabled={biddingDone.includes(bid.id)}
+                                        >
+                                            <FaHeart />
+                                        </button>
+                                    </td>
                                 </tr>
                             </thead>
 
