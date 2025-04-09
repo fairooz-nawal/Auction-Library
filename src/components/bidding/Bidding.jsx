@@ -1,6 +1,6 @@
 import React, { use } from 'react';
 import { FaRegHeart } from "react-icons/fa";
-const Bidding = ({ bidding }) => {
+const Bidding = ({ bidding,handleAddBookMark }) => {
     const allbiddings = use(bidding);
     return (
         <div className='w-4/6 bg-white rounded-3xl'>
@@ -15,8 +15,8 @@ const Bidding = ({ bidding }) => {
                     </tr>
                 </thead>
                 {
-                    allbiddings.map(bid =>
-                        <>
+                    allbiddings.map((bid,index) =>
+                        <React.Fragment key={index}>
                             <thead>
                                 <tr>
                                     <td>
@@ -39,12 +39,12 @@ const Bidding = ({ bidding }) => {
                                     </td>
                                     <td><div className="font-bold text-gray-500">{bid.timeLeft}</div></td>
                                     <th>
-                                        <button className="btn btn-ghost btn-xs text-xl"><FaRegHeart /></button>
+                                        <button onClick={()=>handleAddBookMark(bid)} className="btn btn-ghost btn-xs text-xl"><FaRegHeart /></button>
                                     </th>
                                 </tr>
                             </thead>
 
-                        </>)
+                        </React.Fragment>)
                 }
             </table>
         </div>
